@@ -9,7 +9,6 @@ export interface NetworkConfig {
 export const NETWORKS: NetworkConfig[] = [
   { id: flare.id, name: "Flare", image: "flare.png" },
   { id: arbitrum.id, name: "Arbitrum One", image: "arbitrum-one.png" },
-  { id: aurora.id, name: "Aurora", image: "aura.png" },
   { id: 43114, name: "Avalanche", image: "avalanche.png" },
   { id: 8453, name: "Base", image: "base.png" },
   { id: 204, name: "Bera Chain", image: "bera_1.png" },
@@ -33,7 +32,6 @@ export const NETWORKS: NetworkConfig[] = [
   { id: 137, name: "Polygon", image: "polygon.png" },
   { id: 534352, name: "Scroll", image: "scroll.png" },
   { id: 167004, name: "Taiko", image: "taiko.png" },
-  { id: 88, name: "Viction", image: "viction.png" },
   { id: 202212, name: "X Layer", image: "xlayer.png" },
   { id: 7000, name: "ZetaChain", image: "zeta.png" },
   { id: 324, name: "zkSync Era", image: "zk-sync.png" },
