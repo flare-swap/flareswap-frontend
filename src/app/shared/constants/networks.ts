@@ -29,7 +29,6 @@ export const NETWORKS: NetworkConfig[] = [
   { id: 169, name: "Manta Network", image: "manta.png" },
   { id: 5000, name: "Mantle", image: "mantle.png" },
   { id: 1088, name: "Metis", image: "metis.png" },
-  { id: 111188, name: "Micro3", image: "micro3.png" },
   { id: 1284, name: "Moonbeam", image: "moonbeam.png" },
   { id: 245022934, name: "Neon EVM", image: "neon_1.png" },
   { id: 204, name: "opBNB", image: "opbnb.png" },
