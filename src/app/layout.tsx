@@ -83,7 +83,25 @@ export default function RootLayout({
         <title>{metadata.title as string}</title>
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="/images/flare-swap.png" />
+
+        {/* Open Graph meta tags */}
+        <meta property="og:title" content={metadata.title as string} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="https://flareswap.finance/images/metadata_FSW.png" />
+        <meta property="og:url" content="https://flareswap.finance" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card meta tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@FlareSwap" />
+        <meta name="twitter:title" content={metadata.title as string} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content="https://flareswap.finance/images/metadata_FSW.png" />
+
+        {/* Additional meta tags */}
+        <meta name="keywords" content="FlareSwap, DEX, Flare Network, DeFi, Decentralized Exchange" />
+        <meta name="author" content="FlareSwap Team" />
+        <link rel="canonical" href="https://flareswap.finance" />
       </Head>
       <body className="font-sans">
         <Providers initialState={initialState}>

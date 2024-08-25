@@ -4,8 +4,7 @@ import Link from "next/link";
 const SocialMediaLinks = () => {
   const socialLinks = [
     { icon: "/icons/social-media/x.svg", alt: "X (Twitter)", url: "https://x.com/FlareSwapDEX" },
-    { icon: "/icons/social-media/tele.svg", alt: "Telegram", url: "https://t.me/flareswapofficial" },
-    { icon: "/icons/social-media/discord.svg", alt: "Discord", url: "https://discord.gg/zr5ESYK9nF" },
+    { icon: "/icons/social-media/discord.svg", alt: "Discord", url: "https://discord.com/invite/zr5ESYK9nF" },
     { icon: "/icons/social-media/doc.svg", alt: "Documentation", url: "https://docs.flareswap.finance" },
   ];
 
