@@ -10,6 +10,8 @@ import Footer from "./shared/components/Footer";
 import Header from "./shared/components/Header";
 import Modal from "./shared/components/Modal";
 import { getConfig } from "./shared/constants/wagmi-config";
+import Script from "next/script";
+import GoogleAnalytics from "./shared/components/GoogleAnalytics";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -104,6 +106,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://flareswap.finance" />
       </Head>
       <body className="font-sans">
+        <GoogleAnalytics ga_id="G-ZLDV6XVSTF"/>
         <Providers initialState={initialState}>
           <main className="min-h-screen relative">
             {/* Background */}
