@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import Head from "next/head";
-import { headers } from "next/headers";
+import { Poppins } from "next/font/google";
 import React from "react";
-import { cookieToInitialState } from "wagmi";
-import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "./shared/components/Footer";
 import Header from "./shared/components/Header";
 import Modal from "./shared/components/Modal";
-import { getConfig } from "./shared/constants/wagmi-config";
-import Script from "next/script";
+import { ToastContainer } from "react-toastify";
+
+import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import getConfig from "next/config";
+import { headers } from "next/headers";
+import { cookieToInitialState } from "wagmi";
+// added
 import GoogleAnalytics from "./shared/components/GoogleAnalytics";
 
 const poppins = Poppins({
@@ -119,6 +122,7 @@ export default function RootLayout({
               <Footer />
             </div>
             <div id="modal-root"></div>
+            <ToastContainer theme="dark" pauseOnHover={false} autoClose={3000} position="top-right" />
             <Modal />
           </main>
         </Providers>

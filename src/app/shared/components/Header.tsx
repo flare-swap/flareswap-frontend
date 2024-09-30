@@ -7,6 +7,7 @@ import { useState } from "react";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { AnimatePresence, motion } from "framer-motion";
 import ConnectWalletBtn from "./ConnectWalletBtn";
+import SelectNetwork from "./SelectNetwork";
 
 const menus = [
   {
@@ -16,6 +17,10 @@ const menus = [
   {
     label: "Swap",
     route: "/swap",
+  },
+  {
+    label: "Liquidity",
+    route: "/liquidity",
   },
   {
     label: "NFTs",
@@ -77,6 +82,7 @@ const Header = () => {
           ))}
         </div>
         <div className="flex gap-[10px] items-center">
+          <SelectNetwork/>
           <ConnectWalletBtn/>
           <Image className="lg:hidden" src={"/icons/hamburger.svg"} width={32} height={32} alt="menu" onClick={() => setIsMenuOpen(true)}></Image>
         </div>

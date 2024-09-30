@@ -1,10 +1,10 @@
-import { createConfig, http, cookieStorage, createStorage } from "wagmi";
-import { flare, mainnet } from "wagmi/chains";
+import { cookieStorage, createConfig, createStorage, http } from "wagmi";
+import { flareTestnet, songbirdTestnet } from "wagmi/chains";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 
 export function getConfig() {
   return createConfig({
-    chains: [mainnet, flare],
+    chains: [songbirdTestnet, flareTestnet],
     ssr: true,
     storage: createStorage({
       storage: cookieStorage,
@@ -17,8 +17,8 @@ export function getConfig() {
       }),
     ],
     transports: {
-      [mainnet.id]: http(),
-      [flare.id]: http(),
+      [songbirdTestnet.id]: http(),
+      [flareTestnet.id]: http(),
     },
   });
 }

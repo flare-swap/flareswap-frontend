@@ -2,7 +2,7 @@ import Image from "next/image";
 import Carousel from "./shared/components/Carousel";
 import HeroImage from "./shared/components/HeroImage";
 
-export default function Home() {
+export default function Home() { 
   return (
     <div className="relative z-[2]">
       <div className="flex justify-center mt-[32px] lg:mt-[48px] mb-[32px] lg:mb-[64px]">
@@ -57,7 +57,7 @@ export default function Home() {
             <div className="relative w-[187.83px] h-[161px] lg:min-w-[350px] lg:h-[300px]">
               <Image quality={100} src={"/images/img-01.png"} alt="high-performance" fill sizes="(max-width: 1024px) 350px, 300px" className="object-contain" />
               <div className="absolute top-[50px] lg:top-[100px] left-1/2 rounded-[12px] overflow-hidden -translate-x-1/2 w-[121px] h-[121px] lg:min-w-[227px] lg:h-[227px]">
-                <Image quality={100} src={"/images/img-01.gif"} alt="high-performance-gif" fill sizes="(max-width: 1024px) 227px, 227px" className="object-contain " />
+                <Image quality={100} src={"/images/img-01.gif"} alt="high-performance-gif" fill sizes="(max-width: 1024px) 227px, 227px" className="object-contain" unoptimized={true} />
               </div>
             </div>
           </div>

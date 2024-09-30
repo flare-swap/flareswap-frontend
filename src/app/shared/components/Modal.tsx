@@ -1,9 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Image from 'next/image';
-import { useModal } from '../contexts/ModalContext';
+import React from "react";
+import ReactDOM from "react-dom";
+import { useModal } from "../contexts/ModalContext";
 
 interface ModalProps {}
 
@@ -13,24 +12,11 @@ const Modal: React.FC<ModalProps> = () => {
   if (!isModalOpen) return null;
 
   return ReactDOM.createPortal(
-    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-10">
-      <div className="w-full max-w-lg mx-3">
-        <div className="bg-white rounded-2xl p-4">
-          <div className="flex justify-end text-2xl">
-            <Image 
-              src="/icons/close-black.svg" 
-              alt="Close"
-              width={24} 
-              height={24} 
-              onClick={() => closeModal()}
-              className="cursor-pointer"
-            />
-          </div>
-          {modalContent}
-        </div>
-      </div>
-    </div>,
-    document.getElementById('modal-root')!
+    <>
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-[50]" onClick={() => closeModal()}></div>
+      <div className="fixed z-[51] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">{modalContent}</div>
+    </>,
+    document.getElementById("modal-root")!
   );
 };
 

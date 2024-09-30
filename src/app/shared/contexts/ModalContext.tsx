@@ -5,6 +5,8 @@ interface ModalContextType {
   openModal: (content: React.ReactNode) => void;
   closeModal: () => void;
   modalContent: React.ReactNode | null;
+  maskClosable: boolean;
+  setMaskClosable: (v: boolean) => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -16,6 +18,7 @@ interface ModalProviderProps {
 export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [modalContent, setModalContent] = useState<React.ReactNode | null>(null);
+  const [maskClosable, setMaskClosable] = useState<boolean>(true);
 
   const openModal = (content: React.ReactNode) => {
     setModalContent(content);
@@ -27,7 +30,7 @@ export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
     setModalContent(null);
   };
 
-  return <ModalContext.Provider value={{ isModalOpen, openModal, closeModal, modalContent }}>{children}</ModalContext.Provider>;
+  return <ModalContext.Provider value={{ isModalOpen, openModal, closeModal, modalContent, maskClosable, setMaskClosable }}>{children}</ModalContext.Provider>;
 };
 
 export const useModal = (): ModalContextType => {
